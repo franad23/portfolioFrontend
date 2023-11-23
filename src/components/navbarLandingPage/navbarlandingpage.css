@@ -65,3 +65,9 @@
   color: white;
   transition: 0.3s;
 }
+
+.material-symbols-outlined {
+  font-size: 2rem;
+  cursor: pointer;
+  width: 28px;
+}

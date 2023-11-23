@@ -16,3 +16,36 @@
   background-color: var(--Rich-Black);
   color: var(--Ivory-);
 }
+
+.titleFullStackContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleFullStack {
+  font-family: var(--BebasNeue-Font-);
+  font-size: 8rem;
+  height: 100px;
+}
+
+.fotoContainer {
+  background-color: var(--Ivory-);
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin-top: 40px;
+}
+
+.firstSectionHomePage {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 0% 15%;
+}
+
+.hiTitle {
+  font-family: var(--IBM-Font-);
+  font-weight: 300;
+  margin-bottom: -30px;
+}
