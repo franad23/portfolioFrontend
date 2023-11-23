@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Oxford-blue-: #091235;
+  --Rich-Black: #14202E;
+  --Charcoal-: #2B4257;
+  --Carolina-Blue-: #88A9C3;
+  --Ivory-: #F2F2E3;
+  --IBM-Font-: 'IBM Plex Sans', sans-serif;
+  /* Font Weight: 300, 500, 700 */
+  --BebasNeue-Font-: 'Bebas Neue', sans-serif;
+  background-color: var(--Rich-Black);
+}
+
+.navbarLandingPageMainContainer {
+  height: 50px;
+  background-color: var(--Charcoal-);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15%;
+}
+
+.optionsNavbarContainer {
+  list-style-type: none;
+  font-family: var(--IBM-Font-);
+  font-size: 1.2rem;
+  height: 100%;
+  font-weight: 300;
+  display: flex;
+  gap: 10px;
+}
+
+.optionsNavbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid transparent;
+}
+
+.optionsNavbar:hover {
+  cursor: pointer;
+  color: white;
+  border-bottom: 4px solid var(--Ivory-);
+  transition: 0.3s;
+}
+
+.socialMediaIconsContainer {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialMediaIcon {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.socialMediaIcon:hover {
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
