@@ -18,17 +18,17 @@ function NavbarLandingPage() {
       <ul className='optionsNavbarContainer'>
         <li>
           <NavLink to='/' className={({isActive})=> isActive ? 'optionsNavbar activeLink' : 'optionsNavbar'}>
-            Home
+            {language === true ? "Inicio" : "Home"}
           </NavLink>
         </li>
         <li>
           <NavLink to='/skills' className={({isActive})=> isActive ? 'optionsNavbar activeLink' : 'optionsNavbar'}>
-            Skills
+            {language === true ? "Habilidades" : "Skills"}
           </NavLink>
         </li>
         <li>
           <NavLink to='/projects' className={({isActive})=> isActive ? 'optionsNavbar activeLink' : 'optionsNavbar'}>
-            Projects
+            {language === true ? "Proyectos" : "Projects"}
           </NavLink>
         </li>
         <li>
