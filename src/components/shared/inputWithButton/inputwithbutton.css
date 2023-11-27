@@ -24,7 +24,7 @@
 
 .inputWithButton {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border-radius: 3px 0px 0px 3px;
   background-color: var(--Ivory-);
   padding-left: 10px;
@@ -33,7 +33,7 @@
 }
 
 .buttonInputWithButton{
-  height: 30px;
+  height: 40px;
   background-color: var(--Oxford-blue-);
   color: var(--Ivory-);
   font-family: var(--IBM-Font-);

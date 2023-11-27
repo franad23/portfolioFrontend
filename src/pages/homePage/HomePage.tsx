@@ -1,4 +1,5 @@
 import useAuthStore from '../../store/auth.store';
+import { Toaster } from 'sonner'
 import './homepage.css';
 
 //Components
@@ -10,6 +11,7 @@ function HomePage() {
   const language = useAuthStore(state => state.language);
   return (
     <div className='homePageMainContainer'>
+      <Toaster position="top-right" />
       <NavbarLandingPage />
       <main className='firstSectionHomePage'>
         <div className='fullStackTitle'>
