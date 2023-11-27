@@ -5,3 +5,9 @@ export const postHomeMessage = async (message: string) => {
     message
   })
 }
+
+export const createAccessToken = async (username: string) => {
+  return await axios.post("/createaccesstoken", {
+    username
+  })
+}

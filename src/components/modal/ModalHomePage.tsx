@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import useAuthStore from '../../store/auth.store';
 import './modalhomepage.css';
+
+//API
+import { createAccessToken } from '../../api/services.api';
 
 interface ModalHomePageProps {
   openModal: boolean;
@@ -10,16 +13,24 @@ interface ModalHomePageProps {
 
 const ModalHomePage = ({openModal, onCloseModal}: ModalHomePageProps) => {
   const [open, setOpen] = useState(openModal);
+  const [username, setUsername] = useState("");
+  const language = useAuthStore((state) => state.language);
+  const setToken = useAuthStore((state) => state.setToken);
 
   useEffect(() => {
     setOpen(openModal)
   },[openModal])
 
-  const language = useAuthStore((state) => state.language);
 
-  const handleClickModal = () => {
-    setOpen(false);
-    onCloseModal();
+  const handleSubmitModal = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const resApi = await createAccessToken(username);
+      setToken(resApi.data.token);
+      onCloseModal();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 
@@ -28,11 +39,12 @@ const ModalHomePage = ({openModal, onCloseModal}: ModalHomePageProps) => {
       <Modal
         open={open}
         title={language ? "Para continuar, necesitamos tu nombre o pseudonimo:" : "To continue, we need your name or pseudonym:"}
-        footer={[
-          <button className='buttonModal' onClick={handleClickModal}>{language ? "Enviar" : "Send"}</button>
-        ]}
+        footer={null}
       >
-        <input type="text" className='inputModal'/>
+        <form onSubmit={handleSubmitModal} className='formModalContainer'>
+          <input type="text" className='inputModal' minLength={3} maxLength={250} onChange={(e) => setUsername(e.target.value)} required/>
+            <button className='buttonModal'>{language ? "Enviar" : "Send" }</button>
+        </form>
       </Modal>
     </div>
   );
