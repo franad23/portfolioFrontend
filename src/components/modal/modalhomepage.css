@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Oxford-blue-: #091235;
+  --Rich-Black: #14202E;
+  --Charcoal-: #2B4257;
+  --Carolina-Blue-: #88A9C3;
+  --Ivory-: #F2F2E3;
+  --IBM-Font-: 'IBM Plex Sans', sans-serif;
+  /* Font Weight: 300, 500, 700 */
+  --BebasNeue-Font-: 'Bebas Neue', sans-serif;
+  background-color: var(--Rich-Black);
+  color: var(--Ivory-);
+}
+.inputModal{
+  border: 1px solid var(--Rich-Black);
+  width: 100%;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.buttonModal {
+  background-color: var(--Oxford-blue-);
+  border-radius: 3px;
+  color: var(--Ivory-);
+  padding: 10px 20px;
+  border: 1px solid transparent;
+}
+.buttonModal:hover {
+  cursor: pointer;
+}

@@ -5,7 +5,6 @@ import './leaveamessage.css';
 import InputWithButton from '../../shared/inputWithButton/InputWithButton';
 
 
-
 function LeaveAMessage() {
   const language = useAuthStore(state => state.language);
   return (
