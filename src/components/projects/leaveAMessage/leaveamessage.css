@@ -18,11 +18,16 @@
 }
 
 .messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
   border-radius: 3px;
   background-color: var(--Rich-Black);
   min-height: 100px;
   padding: 20px;
+  height: 250px;
+  overflow-y: scroll;
 }
 
 .leaveAMessageMainContainer {

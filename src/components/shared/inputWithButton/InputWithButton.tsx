@@ -7,8 +7,12 @@ import './inputwithbutton.css';
 //API
 import { postHomeMessage } from '../../../api/services.api';
 
+interface InputWithButtonProps {
+  messageSent: () => void;
+}
 
-function InputWithButton() {
+
+function InputWithButton({messageSent}: InputWithButtonProps) {
   const language = useAuthStore(state => state.language);
   const token = useAuthStore(state => state.token);
   const [openModal, setOpenModal] = useState(false);
@@ -22,8 +26,8 @@ function InputWithButton() {
       console.log(apiResponse);
       toast.success(language ? apiResponse.data.message.ES : apiResponse.data.message.EN);
       setTextInput("");
+      messageSent()
     } catch (error:any) {
-      
       toast.error(language ? error.response.data.message.ES : error.response.data.message.EN);
       console.log(error);
     }

@@ -17,19 +17,24 @@ function LeaveAMessage() {
   const language = useAuthStore(state => state.language);
   const [firstTenMessages, setFirstTenMessages] = useState<Message[]>([])
 
+  const getMessages = async () => {
+    const apiResponse = await getFirstTenMessages();
+    setFirstTenMessages(apiResponse.data)
+  }
+
   useEffect(() => {
-    const getMessages = async () => {
-      const apiResponse = await getFirstTenMessages();
-      setFirstTenMessages(apiResponse.data)
-    }
     getMessages();
   }, [])
 
-  console.log(firstTenMessages);
+  const handleMessageSent = () => {
+    getMessages();
+  }
 
   return (
     <div className='leaveAMessageMainContainer'>
-      <InputWithButton />
+      <InputWithButton
+        messageSent={handleMessageSent}
+      />
       <div className='messagesContainer'>
         {firstTenMessages.map((message) => (
           <CardMessage

@@ -11,8 +11,8 @@ function CardMessage({date, message, name}:CardMessageProps) {
     <div className='cardMessageMainContainer'>
       <p>{message}</p>
       <div className='dateAndNameMessage'>
-        <span>{name}</span>
-        <span>{date.split('T')[0]}</span>
+        <span className='spanInfoCard'>{name}</span>
+        <span className='spanInfoCard'>{date.split('T')[0]}</span>
       </div>
     </div>
   )

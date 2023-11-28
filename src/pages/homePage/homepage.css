@@ -74,16 +74,12 @@
   border-radius: 5px;
 }
 
-.leaveAMessageContainer {
+.projectsHomePage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
   background-color: var(--Charcoal-);
   padding: 40px;
   border-radius: 5px;
-}
-
-
-.leaveAMessageContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }

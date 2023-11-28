@@ -29,3 +29,13 @@
   gap: 5px;
   justify-content: end;
 }
+
+.cardMessageMainContainer:hover {
+  background-color: var(--Ivory-);
+  color: var(--Rich-Black);
+  transition: ease-in-out 0.2s;
+}
+
+.spanInfoCard{
+  font-weight: 300;
+}
