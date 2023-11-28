@@ -16,6 +16,7 @@ const ModalHomePage = ({openModal, onCloseModal}: ModalHomePageProps) => {
   const [username, setUsername] = useState("");
   const language = useAuthStore((state) => state.language);
   const setToken = useAuthStore((state) => state.setToken);
+  const setName = useAuthStore((state) => state.setName);
 
   useEffect(() => {
     setOpen(openModal)
@@ -27,6 +28,7 @@ const ModalHomePage = ({openModal, onCloseModal}: ModalHomePageProps) => {
     try {
       const resApi = await createAccessToken(username);
       setToken(resApi.data.token);
+      setName(username);
       onCloseModal();
     } catch (error) {
       console.log(error);

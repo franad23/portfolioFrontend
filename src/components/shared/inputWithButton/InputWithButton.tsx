@@ -23,6 +23,8 @@ function InputWithButton() {
       toast.success(language ? apiResponse.data.message.ES : apiResponse.data.message.EN);
       setTextInput("");
     } catch (error:any) {
+      
+      toast.error(language ? error.response.data.message.ES : error.response.data.message.EN);
       console.log(error);
     }
   };
@@ -62,7 +64,7 @@ function InputWithButton() {
         openModal={openModal}
         onCloseModal={handleCloseModal}
       />
-      <input type="text" className='inputWithButton' minLength={3} maxLength={250} onChange={handleInputChange} value={textInput} placeholder='Deja tu mensaje aqui' required/>
+      <input type="text" className='inputWithButton' minLength={3} maxLength={250} onChange={handleInputChange} value={textInput} placeholder={language ? "Deja tu mensaje aqui" : "Leave your message here"} required/>
       <button className='buttonInputWithButton'>{language ? "Enviar" : "Send"}</button>
     </form>
   )

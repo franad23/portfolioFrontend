@@ -11,3 +11,7 @@ export const createAccessToken = async (username: string) => {
     username
   })
 }
+
+export const getFirstTenMessages = async () => {
+  return await axios.get("/getfirsttenmessages")
+}
