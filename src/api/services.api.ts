@@ -15,3 +15,13 @@ export const createAccessToken = async (username: string) => {
 export const getFirstTenMessages = async () => {
   return await axios.get("/getfirsttenmessages")
 }
+
+export const linkShortener = async (link: string) => {
+  return await axios.post("/shortlink", {
+    link
+  })
+}
+
+export const getAllCountLinks = async () => {
+  return await axios.get("/getallcountlinks");
+}

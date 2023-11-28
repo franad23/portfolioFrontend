@@ -83,3 +83,35 @@
   padding: 40px;
   border-radius: 5px;
 }
+.shortenerLinkContainer {
+  display: flex;
+}
+
+.shortenedLinkCounterContainer {
+  font-family: var(--IBM-Font-);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.shortenedLinkCounter{
+  background-color: var(--Rich-Black);
+  color: var(--Ivory-);
+  padding: 10px;
+  border-radius: 3px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.shortLinkContainer {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+.linkShortToCopy:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
