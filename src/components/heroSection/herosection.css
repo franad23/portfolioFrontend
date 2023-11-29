@@ -23,7 +23,6 @@
 }
 
 .backgroundFilter{
-  width: 100vw;
   min-height: 200px;
   background-color: rgba(18, 18, 18, 0.5);
   display: flex;

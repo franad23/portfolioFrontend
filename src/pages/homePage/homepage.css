@@ -72,6 +72,9 @@
   background-color: var(--Charcoal-);
   padding: 40px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .projectsHomePage {
@@ -114,4 +117,10 @@
 .linkShortToCopy:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.projectLeaveAMessageTextContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

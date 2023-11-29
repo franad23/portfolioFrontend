@@ -38,6 +38,7 @@ function HomePage() {
       setLinkShortened(apiResponse.data.linkShortened);
       getCountLinks();
     } catch (error) {
+      toast.error(language ? error.response.data.message.ES : error.response.data.message.EN)
       console.log(error);
     }
   }
@@ -70,7 +71,7 @@ function HomePage() {
             "I have a good grasp of Full Stack development and enjoy its adaptability. From creating appealing front-end interfaces to setting up strong back-end logic, I like dealing with all parts of a project. Alongside my technical experience, I've picked up communication, leadership, and negotiation skills that complement my tech skills."} </p>
         </div>
         <div className='projectsHomePage'>
-          <div>
+          <div className='projectLeaveAMessageTextContainer'>
             <p className='textSectionsContainer'><b>{language ? "Te muestro un poco de mis habilidades:" : "I'll demonstrate some of my skills:"}</b></p>
             <p className='textSectionsContainer'>{language ? "En este ejemplo la aplicacion esta desarrollada sobre typescript y utiliza el Stack PERN (PostgreSQL, Express, React, Node.js), se muestran solo los primeros diez mensajes, ademas hace consumo de una API 'Perspective Google API' para moderar el texto ingresado. Ademas te pedimos nombre o pseudonimo para generar un token con JWT y asi hacer validaciones en el backend."
               : "This app is built using TypeScript and the PERN Stack (PostgreSQL, Express, React, Node.js). Only the first ten messages are displayed. Additionally, it uses a 'Perspective Google API' to check and moderate entered text. We also ask for your name or pseudonym to generate a token with JWT and perform validations in the backend."
@@ -81,7 +82,7 @@ function HomePage() {
           </div>
         </div>
         <div className='projectsHomePage'>
-          <div>
+          <div className='projectLeaveAMessageTextContainer'>
             <p className='textSectionsContainer'><b>{language ? "Acortador de enlaces" : "Link Shortener"}</b></p>
             <p className='textSectionsContainer'>{language ? "Este proyecto tambien esta desarrollado con typescript y PERN, la finalidad es acortar los enlaces, verifica si la pagina web del enlace ingresado existe, verifica en la base de datos si ya se ingreso previamente para evitar duplicaciones"
               : "This project is also developed with TypeScript and PERN stack. Its purpose is to shorten links and verify if the website of the entered link exists. It checks the database to prevent duplicates if the link has been previously entered."}</p>

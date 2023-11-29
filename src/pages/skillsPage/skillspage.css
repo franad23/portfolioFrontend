@@ -16,3 +16,27 @@
   background-color: var(--Rich-Black);
   color: var(--Ivory-);
 }
+
+.languagesSectionContainer {
+  /* height: 100px; */
+  width: 100%;
+  background-color: var(--Charcoal-);
+  border-radius: 5px;
+  padding: 40px;
+  font-family: var(--IBM-Font-);
+}
+
+.textLanguages{
+  font-weight: 300;
+  text-indent: 5%;
+}
+
+.iconsTechLogo {
+  width: 100px;
+}
+.iconsLanguageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+}
