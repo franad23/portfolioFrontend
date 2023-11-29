@@ -2,6 +2,11 @@ import './skillspage.css';
 import useAuthStore from '../../store/auth.store';
 import JSLogo from "../../assets/techsLogo/logo-javascript.svg";
 import TSLogo from "../../assets/techsLogo/typescript.svg";
+import reactLogo from "../../assets/techsLogo/react-2.svg";
+import expressLogo from "../../assets/techsLogo/expressjs-icon.svg";
+import nodeLogo from "../../assets/techsLogo/nodejs-icon.svg";
+import mongoDBLogo from "../../assets/techsLogo/mongodb-icon.svg";
+import postgreeLogo from "../../assets/techsLogo/postgresql-icon.svg";
 
 
 //Components
@@ -26,6 +31,29 @@ function SkillsPage() {
           <div className='iconsLanguageContainer'>
             <img className='iconsTechLogo' src={JSLogo} alt="JavascriptLogo" />
             <img className='iconsTechLogo' src={TSLogo} alt="TypescriptLogo" />
+          </div>
+        </div>
+        <div className='languagesSectionContainer'>
+          <div className='projectLeaveAMessageTextContainer'>
+            <p><b>{language ? "Tecnologias" : "Technologies"}:</b></p>
+            <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas." :
+            "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions."}</p>
+          </div>
+          <div className='iconsLanguageContainer'>
+            <img className='iconsTechLogo' src={reactLogo} alt="Postgree logo" />
+            <img className='iconsTechLogo' src={expressLogo} alt="MongoDB Logo" />
+          </div>
+        </div>
+        <div className='languagesSectionContainer'>
+          <div className='projectLeaveAMessageTextContainer'>
+            <p><b>{language ? "Bases de datos" : "Data bases"}:</b></p>
+            <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas." :
+            "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions."}</p>
+          </div>
+          <div className='iconsLanguageContainer'>
+            <img className='iconsTechLogo' src={reactLogo} alt="reactLogo" />
+            <img className='iconsTechLogo' src={expressLogo} alt="expressLogo" />
+            <img className='iconsTechLogo' src={nodeLogo} alt="nodeLogo" />
           </div>
         </div>
       </div>
