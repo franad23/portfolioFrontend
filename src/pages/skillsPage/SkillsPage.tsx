@@ -35,17 +35,6 @@ function SkillsPage() {
         </div>
         <div className='languagesSectionContainer'>
           <div className='projectLeaveAMessageTextContainer'>
-            <p><b>{language ? "Tecnologias" : "Technologies"}:</b></p>
-            <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas." :
-            "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions."}</p>
-          </div>
-          <div className='iconsLanguageContainer'>
-            <img className='iconsTechLogo' src={reactLogo} alt="Postgree logo" />
-            <img className='iconsTechLogo' src={expressLogo} alt="MongoDB Logo" />
-          </div>
-        </div>
-        <div className='languagesSectionContainer'>
-          <div className='projectLeaveAMessageTextContainer'>
             <p><b>{language ? "Bases de datos" : "Data bases"}:</b></p>
             <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas." :
             "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions."}</p>
@@ -54,6 +43,17 @@ function SkillsPage() {
             <img className='iconsTechLogo' src={reactLogo} alt="reactLogo" />
             <img className='iconsTechLogo' src={expressLogo} alt="expressLogo" />
             <img className='iconsTechLogo' src={nodeLogo} alt="nodeLogo" />
+          </div>
+        </div>
+        <div className='languagesSectionContainer'>
+          <div className='projectLeaveAMessageTextContainer'>
+            <p><b>{language ? "Bases de datos" : "Data bases"}:</b></p>
+            <p className='textLanguages'>{language ? "En mi desarrollo, empleo MongoDB y PostgreSQL como sistemas de gestión de bases de datos. MongoDB, una base de datos NoSQL, ofrece flexibilidad al almacenar datos en documentos flexibles, facilitando la escalabilidad y el manejo de información no estructurada. Por otro lado, PostgreSQL, una base de datos relacional, provee solidez en la integridad de los datos y la consistencia, ideal para aplicaciones que requieren transacciones complejas y relaciones claras entre los datos. Ambas bases de datos son fundamentales en la creación de soluciones robustas y escalables, adaptándose a diferentes necesidades y contextos." :
+            "In my development, I utilize MongoDB and PostgreSQL as database management systems. MongoDB, a NoSQL database, offers flexibility by storing data in flexible documents, making it easier to scale and handle unstructured information. On the other hand, PostgreSQL, a relational database, provides solidity in data integrity and consistency, ideal for applications requiring complex transactions and clear data relationships. Both databases are essential in creating robust and scalable solutions, adapting to various needs and contexts."}</p>
+          </div>
+          <div className='iconsLanguageContainer'>
+            <img className='iconsTechLogo' src={postgreeLogo} alt="Postgree logo" />
+            <img className='iconsTechLogo' src={mongoDBLogo} alt="MongoDB Logo" />
           </div>
         </div>
       </div>
