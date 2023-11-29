@@ -1,5 +1,6 @@
 import './skillspage.css';
 
+
 //Components
 import NavbarLandingPage from '../../components/navbarLandingPage/NavbarLandingPage';
 import HeroSection from '../../components/heroSection/HeroSection';

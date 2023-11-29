@@ -41,8 +41,8 @@ function NavbarLandingPage() {
         <span className="material-symbols-outlined" onClick={handleChangeLanguage}>
           {language === true ? "language_spanish" : "language_us"}
         </span>
-        <li><a className='socialMediaIcon' href=""><GithubOutlined /></a></li>
-        <li><a className='socialMediaIcon' href=""><LinkedinOutlined /></a></li>
+        <li><a className='socialMediaIcon' href="https://github.com/franad23" target='_blank'><GithubOutlined /></a></li>
+        <li><a className='socialMediaIcon' href="https://www.linkedin.com/in/franco-andres-diaz/" target='_blank'><LinkedinOutlined /></a></li>
       </ul>
     </nav>
   )

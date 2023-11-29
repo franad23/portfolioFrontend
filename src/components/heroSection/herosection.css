@@ -18,13 +18,29 @@
 }
 
 .heroSectionMainContainer {
-  height: 200px;
+  min-height: 200px;
   background-size: cover;
 }
 
 .backgroundFilter{
   width: 100vw;
-  height: 200px;
+  min-height: 200px;
   background-color: rgba(18, 18, 18, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.iconsHerosLogo{
+  width: 100px;
+}
+
+.logosContainer{
+  display: flex;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 20px 50px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
