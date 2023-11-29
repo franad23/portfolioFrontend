@@ -25,3 +25,9 @@ export const linkShortener = async (link: string) => {
 export const getAllCountLinks = async () => {
   return await axios.get("/getallcountlinks");
 }
+
+export const getPexelsPhotos = async (query: string) => {
+  return await axios.post(`/getpexelsphoto`, {
+    query
+  });
+}
