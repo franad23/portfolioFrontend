@@ -18,7 +18,7 @@
 }
 
 .languagesSectionContainer {
-  /* height: 100px; */
+  height: fit-content;
   width: 100%;
   background-color: var(--Charcoal-);
   border-radius: 5px;
@@ -39,4 +39,12 @@
   align-items: center;
   justify-content: space-evenly;
   height: 150px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#zustandLogo {
+  height: 120px;
+  width: 150px;
+  object-fit: cover;
 }

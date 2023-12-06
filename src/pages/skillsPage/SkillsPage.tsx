@@ -1,5 +1,7 @@
 import './skillspage.css';
 import useAuthStore from '../../store/auth.store';
+
+//Logos
 import JSLogo from "../../assets/techsLogo/logo-javascript.svg";
 import TSLogo from "../../assets/techsLogo/typescript.svg";
 import reactLogo from "../../assets/techsLogo/react-2.svg";
@@ -7,11 +9,21 @@ import expressLogo from "../../assets/techsLogo/expressjs-icon.svg";
 import nodeLogo from "../../assets/techsLogo/nodejs-icon.svg";
 import mongoDBLogo from "../../assets/techsLogo/mongodb-icon.svg";
 import postgreeLogo from "../../assets/techsLogo/postgresql-icon.svg";
+import htmlLogo from "../../assets/techsLogo/w3_html5-ar21.svg";
+import cssLogo from "../../assets/techsLogo/w3_css-official.svg";
+import zustandLogo from "../../assets/techsLogo/zustand-logo.png";
+import npmLogo from "../../assets/techsLogo/npm-square-red-1.svg";
+import jwtLogo from "../../assets/techsLogo/jwtio-json-web-token.svg";
+import vercelLogo from "../../assets/techsLogo/vercel.svg";
+import axiosLogo from "../../assets/techsLogo/Axios.svg";
+import postmanLogo from "../../assets/techsLogo/getpostman-icon.svg";
+import bootstrapLogo from "../../assets/techsLogo/bootstrap-4.svg";
 
 
 //Components
 import NavbarLandingPage from '../../components/navbarLandingPage/NavbarLandingPage';
 import HeroSection from '../../components/heroSection/HeroSection';
+import FooterLandingPage from '../../components/footer/FooterLandingPage';
 
 function SkillsPage() {
   const language = useAuthStore((state) => state.language);
@@ -35,14 +47,16 @@ function SkillsPage() {
         </div>
         <div className='languagesSectionContainer'>
           <div className='projectLeaveAMessageTextContainer'>
-            <p><b>{language ? "Bases de datos" : "Data bases"}:</b></p>
-            <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas." :
-            "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions."}</p>
+            <p><b>{language ? "Tecnologias" : "Technologies"}:</b></p>
+            <p className='textLanguages'>{language ? "Utilizo React debido a su capacidad para crear interfaces de usuario dinámicas y eficientes. Node.js junto con Express son fundamentales, ya que permiten construir aplicaciones robustas y escalables en el lado del servidor, ofreciendo flexibilidad y rendimiento en el desarrollo de soluciones completas. Además, hago uso de HTML y CSS para la estructura y el diseño de las aplicaciones." :
+            "I use React for its ability to create dynamic and efficient user interfaces. Node.js paired with Express is essential as it enables building robust and scalable server-side applications, offering flexibility and performance in developing complete solutions. Additionally, I employ HTML and CSS for the structure and design of applications."}</p>
           </div>
           <div className='iconsLanguageContainer'>
             <img className='iconsTechLogo' src={reactLogo} alt="reactLogo" />
             <img className='iconsTechLogo' src={expressLogo} alt="expressLogo" />
             <img className='iconsTechLogo' src={nodeLogo} alt="nodeLogo" />
+            <img className='iconsTechLogo' src={htmlLogo} alt="HTMLLogo" />
+            <img className='iconsTechLogo' src={cssLogo} alt="CSSLogo" />
           </div>
         </div>
         <div className='languagesSectionContainer'>
@@ -56,7 +70,24 @@ function SkillsPage() {
             <img className='iconsTechLogo' src={mongoDBLogo} alt="MongoDB Logo" />
           </div>
         </div>
+        <div className='languagesSectionContainer'>
+          <div className='projectLeaveAMessageTextContainer'>
+            <p><b>{language ? "Herramientas" : "Tools"}:</b></p>
+            <p className='textLanguages'>{language ? "Utilizo una gama de herramientas clave en mi desarrollo, tales como JWT para la seguridad y autenticación, junto con Zustand, una librería liviana para la gestión de estado en aplicaciones React. Vercel se convierte en mi elección para alojar y desplegar mis aplicaciones web, mientras que Axios es mi cliente HTTP preferido para realizar peticiones a servidores. Además, empleo Postman para el desarrollo y prueba rápida de APIs. Mis diseños se benefician de Bootstrap y Ant Design, bibliotecas que proveen componentes y estilos para mis proyectos web. Vite se suma como una herramienta ágil para la construcción de proyectos frontend, y Firebase se integra para el desarrollo tanto de aplicaciones web como móviles. Para el envío de correos electrónicos, confío en SendGrid, y aprovecho las diversas APIs de Google para integrar funcionalidades clave en mis proyectos." :
+            "I employ a range of key tools in my development workflow, such as JWT for security and authentication, along with Zustand, a lightweight library for state management in React applications. Vercel becomes my go-to choice for hosting and deploying my web applications, while Axios is my preferred HTTP client for making requests to servers. Additionally, I use Postman for swift API development and testing. My designs benefit from Bootstrap and Ant Design, libraries that provide components and styles for my web projects. Vite contributes as an agile tool for building frontend projects, and Firebase integrates for developing both web and mobile applications. For email delivery, I rely on SendGrid, and I harness the diverse Google APIs to integrate key functionalities into my projects."}</p>
+          </div>
+          <div className='iconsLanguageContainer'>
+            <img className='iconsTechLogo' src={zustandLogo} id='zustandLogo' alt="Zustand logo" />
+            <img className='iconsTechLogo' src={npmLogo} alt="NPM Logo" />
+            <img className='iconsTechLogo' src={jwtLogo} alt="jwt Logo" />
+            <img className='iconsTechLogo' src={vercelLogo} alt="vercel Logo" />
+            <img className='iconsTechLogo' src={axiosLogo} alt="axios Logo" />
+            <img className='iconsTechLogo' src={postmanLogo} alt="Postman Logo" />
+            <img className='iconsTechLogo' src={bootstrapLogo} alt="Bootstrap Logo" />
+          </div>
+        </div>
       </div>
+      <FooterLandingPage/>
     </div>
   )
 }

@@ -7,7 +7,7 @@ function FooterLandingPage() {
 
   return (
     <footer className='footerMainContainer'>
-      <h4 className='footerText'>{language ? "Hecho ❤️ amor por Franco" : "Made with ❤️ by Franco"}</h4>
+      <h4 className='footerText'>{language ? "Hecho con ❤️ por Franco" : "Made with ❤️ by Franco"}</h4>
     </footer>
   )
 }
